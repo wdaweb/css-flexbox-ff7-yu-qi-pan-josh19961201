@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ＣＨＥＳＳ</title>
+    <link
+      rel="stylesheet"
+      href="https://meyerweb.com/eric/tools/css/reset/reset200802.css"
+    />
+    <style>
+      *,
+      :hover,
+      ::after::before {
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: '標楷體';
+      }
+      p {
+        writing-mode: vertical-lr;
+        margin: 0 30px;
+        font-size: 2rem;
+      }
+      #board {
+        width: 700px;
+        height: 750px;
+        border: 2px solid #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #content {
+        width: 576px;
+        height: 648px;
+        border: 1px solid #000;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      .row {
+        width: 100%;
+        height: 72px;
+        display: flex;
+      }
+      .row:nth-child(11) {
+        width: calc(100% - 2px);
+        border: 1px solid #000;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+      }
+      .col {
+        width: 72px;
+        height: 72px;
+        border: 1px solid #000;
+      }
+      .pieceRow {
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, 0);
+        display: flex;
+      }
+      #l1 {
+        top: -30px;
+        width: 650px;
+        justify-content: space-around;
+      }
+      #l2 {
+        top: 115px;
+        width: 500px;
+        justify-content: space-between;
+      }
+      #l3 {
+        top: 185px;
+        width: 650px;
+        justify-content: space-between;
+      }
+      #l4,
+      #l5,
+      #l6 {
+        color: red;
+      }
+      #l4 {
+        top: 400px;
+        width: 650px;
+        justify-content: space-between;
+      }
+      #l5 {
+        top: 475px;
+        width: 500px;
+        justify-content: space-between;
+      }
+      #l6 {
+        top: 618px;
+        width: 650px;
+        justify-content: space-around;
+      }
+      .piece {
+        font-size: 3rem;
+        width: 60px;
+        height: 60px;
+        border: 2px solid black;
+        background: #fff;
+        border-radius: 50%;
+        line-height: 60px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>棋盤裡，車無輪，馬無疆，叫聲將軍提防提防</p>
+    <div id="board">
+      <div id="content">
+        <div class="pieceRow" id="l1">
+          <div class="piece">車</div>
+          <div class="piece">馬</div>
+          <div class="piece">象</div>
+          <div class="piece">士</div>
+          <div class="piece">將</div>
+          <div class="piece">士</div>
+          <div class="piece">象</div>
+          <div class="piece">馬</div>
+          <div class="piece">車</div>
+        </div>
+        <div class="pieceRow" id="l2">
+          <div class="piece">包</div>
+          <div class="piece">包</div>
+        </div>
+        <div class="pieceRow" id="l3">
+          <div class="piece">卒</div>
+          <div class="piece">卒</div>
+          <div class="piece">卒</div>
+          <div class="piece">卒</div>
+          <div class="piece">卒</div>
+        </div>
+        <div class="pieceRow" id="l4">
+          <div class="piece">兵</div>
+          <div class="piece">兵</div>
+          <div class="piece">兵</div>
+          <div class="piece">兵</div>
+          <div class="piece">兵</div>
+        </div>
+        <div class="pieceRow" id="l5">
+          <div class="piece">炮</div>
+          <div class="piece">炮</div>
+        </div>
+        <div class="pieceRow" id="l6">
+          <div class="piece">俥</div>
+          <div class="piece">傌</div>
+          <div class="piece">相</div>
+          <div class="piece">仕</div>
+          <div class="piece">帥</div>
+          <div class="piece">仕</div>
+          <div class="piece">相</div>
+          <div class="piece">傌</div>
+          <div class="piece">俥</div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">楚河　　　　漢界</div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+    <p>圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</p>
+  </body>
+</html>

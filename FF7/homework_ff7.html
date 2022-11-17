@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FF7</title>
+    <link
+      rel="stylesheet"
+      href="https://meyerweb.com/eric/tools/css/reset/reset200802.css"
+    />
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: url('./bg-full.jpg') center no-repeat;
+        backdrop-filter: brightness(25%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #content {
+        width: 1200px;
+        height: 600px;
+        border: 1px solid #555;
+        box-shadow: 0 0 20px #000;
+        display: flex;
+        line-height: 1.5;
+        font-family: Arial, sans-serif;
+      }
+      #left {
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)),
+          url('./main.jpg') center no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      #left img {
+        width: 30%;
+      }
+      #left p {
+        width: 60%;
+      }
+      #right {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #up {
+        background: url('./cloud.png') bottom right/auto 90% no-repeat,
+          linear-gradient(#aaa, #aaa);
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30px;
+      }
+      #up p {
+        width: 60%;
+      }
+      #down {
+        background: url('./tifa.png') bottom left/ auto 90% no-repeat,
+          linear-gradient(#000, #000);
+        width: 100%;
+        height: 50%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 230px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div id="left">
+        <img src="./ps4-ff7.png" />
+        <h1>AVAILABLE NOW</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          porro reiciendis ipsum debitis repellat, quasi ex iusto cupiditate
+          neque numquam odio suscipit ratione ab in eaque fuga quos laudantium
+          repudiandae?
+        </p>
+      </div>
+      <div id="right">
+        <div id="up">
+          <h1>Cloud</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            tempora dicta non. Modi, rem fugiat nobis aut nihil, tenetur at
+            pariatur cupiditate obcaecati natus, quibusdam voluptatem nam ipsam
+            iure sit!
+          </p>
+        </div>
+        <div id="down">
+          <h1>Tifa</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            tempora dicta non. Modi, rem fugiat nobis aut nihil, tenetur at
+            pariatur cupiditate obcaecati natus, quibusdam voluptatem nam ipsam
+            iure sit!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
